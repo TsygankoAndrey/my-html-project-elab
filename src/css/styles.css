@@ -317,7 +317,7 @@ body {
     border: none;
     background-color: transparent;
     border-style: dashed;
-    cursor: grab;
+    cursor: pointer;
 
     border-radius: 10px;
     border-color: #ffffff;
@@ -716,14 +716,69 @@ h3 {
     display: block;
     border-style: none;
     color: rgb(255, 255, 255);
-    display: block;
     margin-top: 20px;
     margin-bottom: 10px;
     font-size: 24px;
     font-weight: 400;
-    height: 32.29px;
+    height: 26.40px;
 }
 
+h5 {
+    display: block;
+    border-style: solid;
+    border-radius: 2px;
+    color: #ffffff;
+    border-color: rgb(35, 154, 85);
+    background-color: rgb(35, 154, 85);
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.fa-plus-circle {
+    width: 16px;
+    height: 18px;
+}
+
+.button-invitation {
+    display: block;
+    width: 208px;
+    height: 60px;
+    text-align: center;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.section-footer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    width: 1657px;
+    height: 70px;
+    background-color: rgb(94, 129, 126);
+}
+
+.about-us {
+    display: block;
+    box-sizing: border-box;
+    width: 256px;
+    height: 70px;
+    padding: 0px;
+    border-style: none;
+    border-width: 0;
+    font-size: 16px;
+    transition: ease-in 0.5s;
+    color: rgb(40, 55, 52);
+    background-color: rgb(94, 129, 126);
+    /* border-color: rgb(94, 129, 126); */
+}
+
+.about-us:hover {
+    background-color: rgb(40, 55, 52);
+    /* border-color: rgb(40, 55, 52); */
+    color: #ffffff;
+    /* -webkit-tap-highlight-color: #ffffff; */
+}
 
 /* /promo */
 
