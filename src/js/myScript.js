@@ -100,7 +100,7 @@ if (time >3 && time <12 ) {
 
 //========== ТЕРНАРНЫЙ ОПЕРАТОР ===========
 
-// (условие) ? (условие верно) : (условие НЕ верно); 
+// (условие) ? (значение если ИСТИНА) : (занчение если ЛОЖЬ); 
 
 // обычное условие с IF
 
@@ -137,19 +137,47 @@ if (time >3 && time <12 ) {
 
 //=========== КОНКАТЕНАЦИЯ СТРОК ================
 
-let greeting = 'Привет, Андрюшка!';
-let howAreYou = ' Как твои дела?';
+// let greeting = 'Привет, Андрюшка!';
+// let howAreYou = ' Как твои дела?';
 
-let sayHi = greeting + howAreYou; 
-console.log(sayHi);
+// let sayHi = greeting + howAreYou; 
+// console.log(sayHi);
 
-// или вариант ДВА (строка + переменная + строка):
+// // или вариант ДВА (строка + переменная + строка):
 
 let userName = 'Андрюшка';
-console.log('Привет, ' + userName + '! Как твои дела?');
+// console.log('Привет, ' + userName + '! Как твои дела?');
 
 
 //============ ШАБЛОННЫЕ СТРОКИ и интерполяция ================
 // используем обратные кавычки
 
 console.log(`Привет, ${userName} ! Как твои дела?`)
+
+let time = 23;
+// let greeting;
+
+// if (time >=3 && time <12) {
+//     greeting = 'Good morning!';
+// } else if (time >=12 && time <18) {
+//     greeting = 'Good afternoon!';
+// } else if (time >=18 && time <22) {
+//     greeting = 'Good evening!';
+// } else {
+//     greeting = 'Good night!';
+// }
+
+// console.log(greeting);
+
+// то же самое в тернарном коде
+
+let greeting = time >= 3 && time <12 ? 'Good morning': (time >=12 && time < 18 ? 'Good afternoon!' : (time >=18 && time <22 ? 'Good evening' : 'Goood night'));
+
+console.log(greeting); 
+
+let age = 12;
+// let result = age >=18 ? 'Вы совершеннолетний' : 'Вы несовршеннолетний';
+// console.log(result);
+
+let result = age >=18 ? 'Вы совершеннолетний' : (age >=13 ? 'Вы подросток' : 'Вы ребенок');
+console.log(result);
