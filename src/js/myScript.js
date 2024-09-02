@@ -145,16 +145,16 @@ if (time >3 && time <12 ) {
 
 // // или вариант ДВА (строка + переменная + строка):
 
-let userName = 'Андрюшка';
+// let userName = 'Андрюшка';
 // console.log('Привет, ' + userName + '! Как твои дела?');
 
 
 //============ ШАБЛОННЫЕ СТРОКИ и интерполяция ================
 // используем обратные кавычки
 
-console.log(`Привет, ${userName} ! Как твои дела?`)
+// console.log(`Привет, ${userName} ! Как твои дела?`)
 
-let time = 23;
+// let time = 23;
 // let greeting;
 
 // if (time >=3 && time <12) {
@@ -171,13 +171,80 @@ let time = 23;
 
 // то же самое в тернарном коде
 
-let greeting = time >= 3 && time <12 ? 'Good morning': (time >=12 && time < 18 ? 'Good afternoon!' : (time >=18 && time <22 ? 'Good evening' : 'Goood night'));
+// let greeting = time >= 3 && time <12 ? 'Good morning': (time >=12 && time < 18 ? 'Good afternoon!' : (time >=18 && time <22 ? 'Good evening' : 'Goood night'));
 
-console.log(greeting); 
+// console.log(greeting); 
 
-let age = 12;
+// let age = 19;
+
 // let result = age >=18 ? 'Вы совершеннолетний' : 'Вы несовршеннолетний';
 // console.log(result);
 
-let result = age >=18 ? 'Вы совершеннолетний' : (age >=13 ? 'Вы подросток' : 'Вы ребенок');
+// let result = age >=18 ? 'Вы совершеннолетний' : (age >=13 ? 'Вы подросток' : 'Вы ребенок');
+// console.log(result);
+
+
+//================== ФУНКЦИИ ======================
+// DRY - don't repeat yourself
+
+
+// function sayHi() {
+//     console.log('Привет, уважаемый пользователь!');
+// }
+// sayHi();
+// sayHi();
+
+//function declaration
+//можно вызвать до объявления
+
+// sayHi();
+
+// function sayHi() {
+//     console.log('Hello!');
+// }
+
+// sayHi();
+
+//function expression
+//можно вызвать только после объявления
+
+// const sayHi = function () {
+//     console.log('Hello!');
+// }
+// sayHi();
+
+//============== ПАРАМЕТРЫ И АРГУМЕНТЫ ДЛЯ ФУНКЦИИ =============
+
+// const userName = 'Andrew';
+// console.log('Hello, ' + userName + '! How are you!');
+//или так
+// console.log(`Hello, ${userName}! How are you?`);
+
+function sayHi(name) {
+    console.log(`Hello, ${name}! How are you?`);
+}
+
+sayHi('Andrew');
+sayHi('Elena');
+sayHi('Antony');
+sayHi('Dmitry');
+
+//============== ФУНКЦИИ RETURN=============
+
+// function summ(a, b) {
+//     const result = a + b;
+//     console.log(result);
+// } 
+
+// summ(10, 15);
+
+//============== ФУНКЦИЯ КАК АГРУМЕНТ=============
+function summ(a, b) {
+    return a + b;
+}
+console.log(summ(15, 15));
+
+let result = summ(summ(15, 15), summ(20, 20));
 console.log(result);
+
+    
