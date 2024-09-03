@@ -239,12 +239,52 @@ sayHi('Dmitry');
 // summ(10, 15);
 
 //============== ФУНКЦИЯ КАК АГРУМЕНТ=============
+// function summ(a, b, c) {
+//     return a + b + c;
+// }
+// console.log(summ(15, 15, 10));
+
+// let result = summ(summ(15, 15, 10), summ(30, 30, 0), summ(20, 20, 10));
+// console.log(result);
+
 function summ(a, b) {
     return a + b;
 }
-console.log(summ(15, 15));
 
-let result = summ(summ(15, 15), summ(20, 20));
-console.log(result);
+function doSomething(func) {
+    let result = func(10, 20);
+    console.log(result);
+}
 
-    
+function diff(a, b) {
+    return a - b;
+}
+
+function multiply(a, b) {
+    return a * b;
+}
+
+function divide(a, b) {
+    if (b === 0) {
+        return "Деление на ноль невозможно";
+    } else {
+        return a / b;
+    }    
+}
+
+doSomething(summ); //30
+doSomething(diff); //-10
+doSomething(multiply); //200
+doSomething(divide); //0.5
+
+//============= IIFE (самовызывающаяся функция)==============
+
+//обернуть фунцию в выражение =взять в круглые скобки= и запустить это выражение на выполнение =поставить парные круглые скобки в конце
+
+(function sayHi() {
+    console.log('Hello dear User!');
+}) ();
+
+(function summ(a, b) {
+    console.log(a + b);
+}) (5, 10);
