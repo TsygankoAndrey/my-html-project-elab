@@ -247,35 +247,35 @@ sayHi('Dmitry');
 // let result = summ(summ(15, 15, 10), summ(30, 30, 0), summ(20, 20, 10));
 // console.log(result);
 
-function summ(a, b) {
-    return a + b;
-}
+// function summ(a, b) {
+//     return a + b;
+// }
 
-function doSomething(func) {
-    let result = func(10, 20);
-    console.log(result);
-}
+// function doSomething(func) {
+//     let result = func(10, 20);
+//     console.log(result);
+// }
 
-function diff(a, b) {
-    return a - b;
-}
+// function diff(a, b) {
+//     return a - b;
+// }
 
-function multiply(a, b) {
-    return a * b;
-}
+// function multiply(a, b) {
+//     return a * b;
+// }
 
-function divide(a, b) {
-    if (b === 0) {
-        return "Деление на ноль невозможно";
-    } else {
-        return a / b;
-    }    
-}
+// function divide(a, b) {
+//     if (b === 0) {
+//         return "Деление на ноль невозможно";
+//     } else {
+//         return a / b;
+//     }    
+// }
 
-doSomething(summ); //30
-doSomething(diff); //-10
-doSomething(multiply); //200
-doSomething(divide); //0.5
+// doSomething(summ); //30
+// doSomething(diff); //-10
+// doSomething(multiply); //200
+// doSomething(divide); //0.5
 
 //============= IIFE (самовызывающаяся функция)==============
 
@@ -285,6 +285,48 @@ doSomething(divide); //0.5
     console.log('Hello dear User!');
 }) ();
 
-(function summ(a, b) {
-    console.log(a + b);
-}) (5, 10);
+// (function summ(a, b) {
+//     console.log(a + b);
+// }) (5, 10);
+
+//======================== JUST PRACTISE ==========================
+
+// function summ(a, b) {
+//     let result = a + b;
+//     return result;
+// } 
+
+// let result = summ(32, 15);
+// console.log(result);
+
+// function summ(a, b) {
+//     let result = a + b;
+//     return result;
+// }
+
+// function divide(a,b) {
+//     return a / b;
+// }
+
+// function multiply(a,b) {
+//     return a * b;
+// }
+
+// function doSomething(func) {
+//     let x = 12;
+//     let y = 14;
+//     let result = func(x, y);
+//     console.log(result);
+// }
+
+// doSomething(summ);
+// doSomething(divide);
+// doSomething(multiply);
+
+
+//============== СТРЕЛОЧНАЯ ФУНКЦИЯ ====================
+
+const summ = (a, b) => a + b;
+
+let res = summ(13,23);
+console.log(res);
