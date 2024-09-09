@@ -188,11 +188,11 @@ if (time >3 && time <12 ) {
 // DRY - don't repeat yourself
 
 
-// function sayHi() {
-//     console.log('Привет, уважаемый пользователь!');
-// }
-// sayHi();
-// sayHi();
+function sayHi() {
+    console.log('Привет, уважаемый пользователь!');
+}
+sayHi();
+sayHi();
 
 //function declaration
 //можно вызвать до объявления
@@ -220,16 +220,16 @@ if (time >3 && time <12 ) {
 //или так
 // console.log(`Hello, ${userName}! How are you?`);
 
-function sayHi(name) {
-    console.log(`Hello, ${name}! How are you?`);
-}
+// function sayHi(name) {
+//     console.log(`Hello, ${name}! How are you?`);
+// }
 
-sayHi('Andrew');
-sayHi('Elena');
-sayHi('Antony');
-sayHi('Dmitry');
+// sayHi('Andrew');
+// sayHi('Elena');
+// sayHi('Antony');
+// sayHi('Dmitry');
 
-//============== ФУНКЦИИ RETURN=============
+// //============== ФУНКЦИИ RETURN=============
 
 // function summ(a, b) {
 //     const result = a + b;
@@ -247,35 +247,41 @@ sayHi('Dmitry');
 // let result = summ(summ(15, 15, 10), summ(30, 30, 0), summ(20, 20, 10));
 // console.log(result);
 
-// function summ(a, b) {
-//     return a + b;
-// }
+function summ(a, b) {
+    return a + b;
+}
 
-// function doSomething(func) {
-//     let result = func(10, 20);
-//     console.log(result);
-// }
+// let result = summ(7, 8);
 
-// function diff(a, b) {
-//     return a - b;
-// }
+function doSomething(func) {
+    let result = func(10, 20);
+    console.log(result);
+    return result;
+}
 
-// function multiply(a, b) {
-//     return a * b;
-// }
+function diff(a, b) {
+    return a - b;
+}
 
-// function divide(a, b) {
-//     if (b === 0) {
-//         return "Деление на ноль невозможно";
-//     } else {
-//         return a / b;
-//     }    
-// }
+function multiply(a, b) {
+    return a * b;
+}
 
-// doSomething(summ); //30
-// doSomething(diff); //-10
-// doSomething(multiply); //200
-// doSomething(divide); //0.5
+function divide(a, b) {
+    if (b === 0) {
+        return "Деление на ноль невозможно";
+    } else {
+        return a / b;
+    }    
+}
+
+let result = doSomething(summ);
+console.log(result);
+
+doSomething(summ); //30
+doSomething(diff); //-10
+doSomething(multiply); //200
+doSomething(divide); //0.5
 
 //============= IIFE (самовызывающаяся функция)==============
 
@@ -326,7 +332,46 @@ sayHi('Dmitry');
 
 //============== СТРЕЛОЧНАЯ ФУНКЦИЯ ====================
 
-const summ = (a, b) => a + b;
+// const summ = (a, b) => a + b;
 
-let res = summ(13,23);
+// let res = summ(13,23);
+// console.log(res);
+
+function summ(a, b) {
+    let result = a + b;
+    return result;
+}
+
+let res = summ(14,34);
 console.log(res);
+
+
+//============== МАССИВЫ ===================================
+
+const autoBrand1 = 'BMW';
+const autoBrand2 = 'Mercedes';
+const autoBrand3 = 'Audi';
+const autoBrand4 = 'Toyota';
+
+const autoBrands = ['BMW', 'Mercedes', 'Audi', 'Toyota'];
+console.log(autoBrands);
+console.log(autoBrands[0]);
+console.log(autoBrands[2]);
+console.log(autoBrands.length);
+
+//============= МЕТОДЫ МАССИВОВ ============================
+
+autoBrands.push('Nissan');
+console.log(autoBrands); 
+
+autoBrands.splice(2, 1, 'Mitsubishi');
+console.log(autoBrands); 
+
+//============ ЦИКЛЫ ========================
+console.log('Start');
+
+for(let i = 0; i < 10; i = i + 2) {
+console.log(i);
+}
+
+console.log('Finish');
